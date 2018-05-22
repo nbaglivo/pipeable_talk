@@ -56,9 +56,15 @@ sourceStream
 
 ---
 
-@title[why_is_important]
+@title[thinking]
 
 ## ... without having to extend the Observable class
+
+![thinking](https://goo.gl/images/JHmexG)
+
+---
+
+@title[we_are_patching]
 
 We are patching the Observable class.
 
@@ -84,12 +90,6 @@ sourceStream
   * Unused operators that are being imported in apps cannot be detected reliably.
 * Any library that imports a patch operator will augment the Observable.prototype for all consumers of that library, creating blind dependencies. If the library removes their usage, they unknowingly break everyone else. With pipeables, you have to import the operators you need into each file you use them in.
   
- ---
-
-@title[lettable_operators]
-
-## That's why we habe lettable operators
-
  ---
 
 @title[lettable_operators]
@@ -125,7 +125,7 @@ sourceStream.pipe(
 
 @title[lettable_not_happening]
 
-![pipeable_now](pipable.png)
+![pipeable_now](https://github.com/nbaglivo/pipeable_talk/blob/master/pipeable.png)
 
 ---
 
