@@ -125,7 +125,7 @@ sourceStream.pipe(
 
 @title[lettable_not_happening]
 
-![pipeable_now](https://github.com/nbaglivo/pipeable_talk/blob/master/pipeable.png)
+![pipeable_now](/nbaglivo/pipeable_talk/blob/master/pipeable.png?raw=true)
 
 ---
 
