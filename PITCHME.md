@@ -113,7 +113,8 @@ sourceStream
 ## It was a bit too verbose, so we can maybe offer a better way of doing composition
 
 ```
-import { map, filter } from 'rxjs/operators/map';
+import { map } from 'rxjs/operators/map';
+import { filter } from 'rxjs/operators/filter';
 
 sourceStream.pipe(
   filter((value) => value > 10)),
@@ -128,10 +129,12 @@ sourceStream.pipe(
 ![pipeable_now](pipeable.png)
 
 ---
+
 @title[pipeall]
 
 ![pipeable_all](https://cdn-images-1.medium.com/max/1600/1*5fPnXp0r3it3Tmoeb7Jg-A.jpeg)
 
+---
 
 @title[nicer_import]
 
