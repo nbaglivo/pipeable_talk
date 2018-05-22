@@ -60,7 +60,7 @@ sourceStream
 
 ## ... without having to extend the Observable class
 
-![thinking](https://goo.gl/images/JHmexG)
+![thinking](https://us.123rf.com/450wm/chutimakuanamon/chutimakuanamon1705/chutimakuanamon170500260/79121847-homer-simpson-thinking-illustration.jpg?ver=6)
 
 ---
 
