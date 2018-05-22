@@ -125,9 +125,13 @@ sourceStream.pipe(
 
 @title[lettable_not_happening]
 
-![pipeable_now](/nbaglivo/pipeable_talk/blob/master/pipeable.png?raw=true)
+![pipeable_now](pipeable.png)
 
 ---
+@title[pipeall]
+
+![pipeable_all](https://cdn-images-1.medium.com/max/1600/1*5fPnXp0r3it3Tmoeb7Jg-A.jpeg)
+
 
 @title[nicer_import]
 
