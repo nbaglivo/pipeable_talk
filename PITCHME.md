@@ -79,10 +79,10 @@ sourceStream
 ## And that is bad because:
 
 * It looks weird.
+* Operators patched directly onto the prototype are not "tree-shakeable".
 * Those lines could be in any file in the projects and the code would still work.
-  * So if you stops using map or filter and you forget to remove the import line, the linter or the compiler are not gonna complain.
-  * Anyone that uses your library now they have map and filter in their observables, they might depend on it and if you later remove it you could break things.
-  * If you remove the import but don't remove the actual function, it might still working if you are importing it from other places, which is confusing.
+  * Unused operators that are being imported in apps cannot be detected reliably.
+* Any library that imports a patch operator will augment the Observable.prototype for all consumers of that library, creating blind dependencies. If the library removes their usage, they unknowingly break everyone else. With pipeables, you have to import the operators you need into each file you use them in.
   
  ---
 
@@ -97,7 +97,8 @@ sourceStream
 ## That's why we have lettable operators that are pure functions
 
 ```
-import { map, filter } from 'rxjs/operators/map';
+import { map } from 'rxjs/operators/map';
+import { filter } from 'rxjs/operators/filter';
 
 sourceStream
   .let(filter((value) => value > 10)))
@@ -126,6 +127,17 @@ sourceStream.pipe(
 
 ![pipeable_now](pipable.png)
 
+---
+
+@title[nicer_import]
+
+# Also, we can use them like this.
+
+*with some changes in the webpack config*
+
+```
+import { map, filter } from 'rxjs/operators/map';
+```
 ---
 
 @title[easy_to_reuse]
