@@ -1,6 +1,6 @@
 @title[let]
 
-## Let's me introduce you to  the __let__ operator
+### Let's me introduce you to  the __let__ operator
 
 __let me have the whole observable.__
 
@@ -28,7 +28,7 @@ sourceStream
 
 @title[let_example]
 
-## Another example, a custom version of map.
+### Another example, a custom version of map.
 
 ```
 const myMap => (fn) => (sourceObservable) => 
@@ -49,7 +49,7 @@ sourceStream
 
 @title[let_recap]
 
-## Recap
+### Recap
 
 * It's a functional way to use operators through high order functions.
 * **It allows you to extend functionality without having to extend the Observable class**.
@@ -58,7 +58,7 @@ sourceStream
 
 @title[thinking]
 
-## ... without having to extend the Observable class
+### ... without having to extend the Observable class
 
 ![thinking](https://us.123rf.com/450wm/chutimakuanamon/chutimakuanamon1705/chutimakuanamon170500260/79121847-homer-simpson-thinking-illustration.jpg?ver=6)
 
@@ -66,7 +66,7 @@ sourceStream
 
 @title[we_are_patching]
 
-We are patching the Observable class.
+### We are patching the Observable class.
 
 ```
 import 'rxjs/add/operators/map';
@@ -82,7 +82,7 @@ sourceStream
 
 @title[it_was_bad]
 
-## And that is bad because:
+### And that is bad because:
 
 * It looks weird.
 * Operators patched directly onto the prototype are not "tree-shakeable".
@@ -94,7 +94,7 @@ sourceStream
 
 @title[lettable_operators]
 
-## That's why we have lettable operators that are pure functions
+### That's why we have lettable operators that are pure functions
 
 ```
 import { map } from 'rxjs/operators/map';
@@ -110,7 +110,7 @@ sourceStream
 
 @title[lettable_operators_bad_parts]
 
-## It was a bit too verbose, so we can maybe offer a better way of doing composition
+### It was a bit too verbose, so we can maybe offer a better way of doing composition
 
 ```
 import { map } from 'rxjs/operators/map';
@@ -138,7 +138,7 @@ sourceStream.pipe(
 
 @title[nicer_import]
 
-# Also, we can use them like this.
+### Also, we can use them like this.
 
 *with some changes in the webpack config*
 
@@ -149,7 +149,7 @@ import { map, filter } from 'rxjs/operators/map';
 
 @title[easy_to_reuse]
 
-## Easy to reuse
+### Easy to reuse
 
 ```
 import { map, filter } from 'rxjs/operators/filter';
