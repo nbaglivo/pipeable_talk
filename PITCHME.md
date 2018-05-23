@@ -143,7 +143,7 @@ sourceStream.pipe(
 *with some changes in the webpack config*
 
 ```
-import { map, filter } from 'rxjs/operators/map';
+import { map, filter } from 'rxjs';
 ```
 ---
 
@@ -152,7 +152,7 @@ import { map, filter } from 'rxjs/operators/map';
 ### Easy to reuse
 
 ```
-import { map, filter } from 'rxjs/operators/filter';
+import { map, filter } from 'rxjs';
 
 const filterUndefined = filter(_.negate(_.isUndefined))
 
@@ -162,4 +162,10 @@ sourceStream.pipe(
 ).subscribe((value) => console.log(value)))
 ```
 
+---
 
+@title[easy_to_reuse]
+
+### It is kind of mandatory
+
+Lettable operators were introduced in rxjs 5.5 and the patched things will be deprecated in rxjs 6.0 (still available trhough `rxjs-compat` package
