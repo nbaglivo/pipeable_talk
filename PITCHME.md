@@ -90,7 +90,7 @@ sourceStream
   * Unused operators that are being imported in apps cannot be detected reliably.
 * Any library that imports a patch operator will augment the Observable.prototype for all consumers of that library, creating blind dependencies. If the library removes their usage, they unknowingly break everyone else. With pipeables, you have to import the operators you need into each file you use them in.
   
- ---
+---
 
 @title[lettable_operators]
 
